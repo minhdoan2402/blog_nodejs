@@ -9,7 +9,7 @@ app.get('/trang-chu', (req, res) => {
   var b = 2;
   var c = a + b;
   console.log(c);
-  res.send('Hello World!')
+  res.send('Hello World! hahaha')
 })
 
 // 127.0.0.1 - localhost
