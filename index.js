@@ -1,15 +1,14 @@
 const express = require('express')
+const morgan = require('morgan')
 const app = express()
 const port = 3000
+
+app.use(morgan('combined'))
 
 // function(req, res) thay (req, res) =>
 // get : được xem là router
 app.get('/trang-chu', (req, res) => {
-  var a = 1;
-  var b = 2;
-  var c = a + b;
-  console.log(c);
-  res.send('Hello World! hahaha')
+  res.send('Hello World!')
 })
 
 // 127.0.0.1 - localhost
