@@ -9,14 +9,18 @@ const port = 3000;
 app.use(morgan('combined'));
 
 // Template engine
-app.engine('handlebars', engine({ extname: '.hbs', defaultLayout: "main"}));
-app.set('view engine', 'handlebars');
+app.engine('hbs', engine({ extname: '.hbs'}));
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources\\views'));
 // console.log('PATH:', path.join(__dirname, 'resources/views'));
 // function(req, res) thay (req, res) =>
 // get : được xem là router
 app.get('/', (req, res) => {
   res.render('home');
+})
+
+app.get('/news', (req, res) => {
+  res.render('news');
 })
 
 // 127.0.0.1 - localhost
