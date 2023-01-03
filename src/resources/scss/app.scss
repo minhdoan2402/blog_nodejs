@@ -1,0 +1,10 @@
+// chỉ viết vào file app.scss và chạy commandline : npm run watch
+@import 'variables';
+
+h1 {
+    color: $red-color;
+}
+
+h2 {
+    color: teal;
+}
